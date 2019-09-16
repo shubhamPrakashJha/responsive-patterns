@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Brighton Times</title>
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link rel="stylesheet" type="text/css" href="main.css" />
+        <style>
+            @media screen and (min-width: 450px) and (max-width: 550px) {
+                body {
+                    font-size: 1em;
+                }
+
+                .weather__next__item > span {
+                    display: inline-block;
+                    width: 30%;
+                }
+
+                .weather__next__item img {
+                    width: 60px;
+                    height: 60px;
+                }
+
+                /* remove this styles for upper part to work */
+                .weather__next__item {
+                    width: 100%;
+                }
+            }
+
+            @media screen and (min-width: 700px) {
+                .weather {
+                    width: 700px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    display: block;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <main>
+            <section class="weather">
+                <span class="weather__location">Brighton, UK</span>
+                <span class="weather__desc">Sunny</span>
+                <span class="weather__today">
+                    <img
+                        class="weather__today__image"
+                        src="images/weather.png"
+                        alt="icon of a partially sunny day"
+                    /><span class="weather__today__temp">13</span
+                    ><span class="weather__today__deg">&deg;C</span>
+                </span>
+                <ul class="weather__next">
+                    <li class="weather__next__item">
+                        <img
+                            class="weather__next__image"
+                            src="images/sunny.png"
+                            alt="icon of a sunny day"
+                        />
+                        <span>Mon</span>
+                        <span>13 &deg;C</span>
+                    </li>
+                    <li class="weather__next__item">
+                        <img
+                            class="weather__next__image"
+                            src="images/cloudy.png"
+                            alt="icon of a cloudy day"
+                        />
+                        <span>Tues</span>
+                        <span>13 &deg;C</span>
+                    </li>
+                    <li class="weather__next__item">
+                        <img
+                            class="weather__next__image"
+                            src="images/cloudy.png"
+                            alt="icon of a cloudy day"
+                        />
+                        <span>Wed</span>
+                        <span>13 &deg;C</span>
+                    </li>
+                    <li class="weather__next__item">
+                        <img
+                            class="weather__next__image"
+                            src="images/rain.png"
+                            alt="icon of a rainy day"
+                        />
+                        <span>Thu</span>
+                        <span>13 &deg;C</span>
+                    </li>
+                    <li class="weather__next__item">
+                        <img
+                            class="weather__next__image"
+                            src="images/sunny.png"
+                            alt="icon of a sunny day"
+                        />
+                        <span>Fri</span>
+                        <span>13 &deg;C</span>
+                    </li>
+                </ul>
+            </section>
+        </main>
+    </body>
+</html>

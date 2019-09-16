@@ -1,0 +1,123 @@
+/* This will set the container to Flexbox */
+.content {
+    /* width: 100%; */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* This will set all the length of items inside content to 100% */
+.hero,
+.news,
+.scores,
+.weather {
+    width: 100%;
+}
+
+/* This is css of Hamburger menu item */
+svg {
+    width: 2em;
+    fill: gray;
+    right: 10px;
+    position: absolute;
+    right: 0px;
+    top: 15px;
+}
+
+/* Hide the hamburger meny by default */
+#menu {
+    display: none;
+}
+
+/* When screen width is small  */
+@media screen and (max-width: 539px) {
+    /* Decrese the size of Header */
+    .header__logo {
+        height: 44px;
+        margin-top: 4px;
+    }
+
+    .header__title {
+        font-size: 2em;
+    }
+
+    /* Make the navigation container into flex-box container */
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        /* Make it Fixed  */
+        position: absolute;
+        /* Match th screeen width  */
+        width: 100%;
+        background-color: #c1c1c1;
+        /* Bring  it on the top */
+        z-index: 1;
+        /* Hide the nav buttons */
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    /* Unhide Navigation if class set to open */
+    nav.open {
+        transform: translateX(0%);
+    }
+    /* Set width of all items inside nav container to 100%*/
+    .nav__item {
+        width: 100%;
+    }
+    /* Unhide Hamburger Menu Item */
+    #menu {
+        display: inherit;
+    }
+}
+
+/* When screen width is medium */
+@media (min-width: 540px) {
+    .hero {
+        width: 60%;
+        /* Make it appear 1st in theflex container */
+        order: -2;
+    }
+    .weather {
+        width: 40%;
+        /* Make it appear 2nd in theflex container */
+        order: -1;
+    }
+}
+
+/* When Screen size is large */
+@media (min-width: 768px) {
+    .hero {
+        width: 50%;
+        /* Make it appear 1st in theflex container */
+        order: -4;
+    }
+    .weather {
+        width: 40%;
+        /* Make it appear 4th in theflex container */
+        order: -1;
+    }
+    .top-news {
+        width: 50%;
+        /* Make it appear 2nd in theflex container */
+        order: -3;
+    }
+
+    .scores {
+        width: 60%;
+        /* Make it appear 3rd in theflex container */
+        order: -2;
+    }
+}
+
+/* when screen size is very large */
+@media (min-width: 1024px) {
+    /* add margin on the sides and make the length of container to fixed */
+    main,
+    .header__inner,
+    .nav,
+    .content {
+        width: 1024px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

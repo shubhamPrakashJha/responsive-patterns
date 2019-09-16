@@ -1,0 +1,7 @@
+/* add enire block */
+img,
+embed,
+object,
+video {
+    max-width: 100%;
+}

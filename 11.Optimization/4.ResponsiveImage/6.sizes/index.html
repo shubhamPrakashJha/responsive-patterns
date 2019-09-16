@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+        />
+
+        <title>Udacity RI: srcset w values</title>
+
+        <link rel="icon" sizes="192x192" href="../../../images/icon.png" />
+
+        <style>
+            body {
+                align-items: center;
+                display: flex;
+                height: 100vh;
+                justify-content: center;
+                margin: 0;
+            }
+
+            img {
+                transition: width 0.5s;
+                width: 50vw;
+            }
+
+            @media screen and (max-width: 250px) {
+                img {
+                    width: 100vw;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- What if the image won't be displayed at the full viewport width? Then you need something more than srcset, which assumes the image will be full viewport width.
+
+Add a sizes attribute to the image with a media query and a vw value. srcset and sizes together tell the browser the natural width of the image, and how wide the image will be displayed relative to viewport width. -->
+
+        <!-- sizes consists of comma separated mediaQuery width pairs. sizes tells the browser early in the load process that the image will be displayed at some width when the mediaQuery is hit. -->
+        <img
+            src="small.jpg"
+            srcset="small.jpg 500w, medium.jpg 1000w, large.jpg 1500w"
+            sizes="(max-width: 250px) 100vw, 50vw"
+            alt="Wallaby"
+        />
+
+        <!-- <p>
+            The sizes attribute gives the browser information about the display
+            size of an image element – it does not actually cause the image to
+            be resized. That's done in CSS!
+        </p> -->
+
+        <script src="../../../js/lib/ga.js"></script>
+    </body>
+</html>

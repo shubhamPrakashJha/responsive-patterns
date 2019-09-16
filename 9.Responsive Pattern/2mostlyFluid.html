@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style type="text/css">
+            .container {
+                /* width: 100%; */
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .box {
+                width: 100%;
+                height: 150px;
+            }
+
+            .dark_blue {
+                background-color: darkblue;
+            }
+            .light_blue {
+                background-color: lightblue;
+            }
+            .green {
+                background-color: green;
+            }
+            .red {
+                background-color: red;
+            }
+            .orange {
+                background-color: orange;
+            }
+
+            /* Add These breakpoints */
+            @media screen and (min-width: 450px) {
+                .light_blue,
+                .dark_blue {
+                    width: 50%;
+                }
+            }
+
+            @media screen and (min-width: 550px) {
+                .green,
+                .red,
+                .orange {
+                    width: 33.333333%;
+                }
+            }
+
+            @media screen and (min-width: 700px) {
+                .container {
+                    width: 700px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="box dark_blue"></div>
+            <div class="box light_blue"></div>
+            <div class="box green"></div>
+            <div class="box red"></div>
+            <div class="box orange"></div>
+        </div>
+    </body>
+</html>

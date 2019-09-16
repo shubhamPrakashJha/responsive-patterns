@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <style>
+            /* @media screen and (min-width: 1024px) {
+                img {
+                    height: 100vh;
+                }
+            }
+            @media screen and (min-width: 768px) {
+                img {
+                    width: 100vw;
+                }
+            }
+            @media screen and (max-width: 425px) {
+                img {
+                    width: 100min;
+                    height: 100min;
+                }
+            }
+            @media screen and (max-width: 425px) {
+                img {
+                    width: 100max;
+                    height: 100max;
+                }
+            } */
+            img {
+                /* Full image on entire screen */
+                width: 100vw;
+                height: 100vh;
+                /* if want to shoe the entire image, no crop */
+                width: 100vmin;
+                height: 100vmin;
+                /* if want to display on entire screen, crop  */
+                width: 100vmax;
+                height: 100vmax;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="../images/dachshund.jpg" alt="dachshund" />
+    </body>
+</html>

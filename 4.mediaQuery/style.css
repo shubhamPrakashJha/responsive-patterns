@@ -1,0 +1,23 @@
+img,
+embed,
+object,
+video {
+    max-width: 100%;
+}
+
+a {
+    /* This sets the padding to 1.5 times the font size of the current element */
+    padding: 1.5em;
+}
+
+a:hover {
+    /* add */
+    padding: 1.5em;
+}
+
+.class_rand a {
+    text-decoration: none;
+    color: rgb(158, 75, 75);
+    /* can also add */
+    padding: 1.5em inherit;
+}

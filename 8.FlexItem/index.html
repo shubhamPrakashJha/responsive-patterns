@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style type="text/css">
+            .container {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .box {
+                width: 150px;
+                height: 150px;
+            }
+
+            .blue {
+                background-color: blue;
+            }
+
+            .red {
+                background-color: red;
+            }
+
+            .green {
+                background-color: green;
+            }
+
+            /* Add this for changing order at diff width */
+            @media screen and (min-width: 500px) {
+                .blue {
+                    order: 3;
+                }
+                .red {
+                    order: 2;
+                }
+                .green {
+                    order: 1;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="box blue"></div>
+            <div class="box red"></div>
+            <div class="box green"></div>
+        </div>
+    </body>
+</html>

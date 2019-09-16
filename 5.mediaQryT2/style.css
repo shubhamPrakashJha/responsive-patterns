@@ -1,0 +1,33 @@
+img,
+embed,
+object,
+video {
+    max-width: 100%;
+}
+
+a {
+    padding: 1.5em;
+}
+
+a:hover {
+    padding: 1.5em;
+}
+
+.class_rand a {
+    text-decoration: none;
+    color: rgb(158, 75, 75);
+    padding: 1.5em inherit;
+}
+
+/* Add this  */
+@media screen and (min-width: 500px) {
+    body {
+        color: brown;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    body {
+        background-color: aqua;
+    }
+}
